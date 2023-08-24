@@ -31,5 +31,63 @@ internal class Program
 
         int numberConvert = Convert.ToInt32("100");
         Console.WriteLine("Número utilizando o convert: " + numberConvert);
+
+        //Operadores de atribuição
+        int x = 0;
+        Console.WriteLine("x: " + x);
+        x += 5;
+        Console.WriteLine("x += 5: " + x);
+        x -= 1;
+        Console.WriteLine("x -= 1: " + x);
+        x *= 10;
+        Console.WriteLine("x *= 10: " + x);
+        x /= 2;
+        Console.WriteLine("x /= 2: " + x);
+
+        // Operadores de comparação
+        int y = 5;
+        int j = 9;
+        Console.WriteLine("y: " + y);
+        Console.WriteLine("j: " + j);
+        Console.WriteLine("Equal: " + (y == j));
+        Console.WriteLine("Different: " + (y != j));
+        Console.WriteLine("Greater than: " + (y > j));
+        Console.WriteLine("Less than: " + (y < j));
+        Console.WriteLine("Greater than or equal to: " + (y >= j));
+        Console.WriteLine("Less than or equal to: " + (y <= j));
+
+        //operadores lógicos (&&, || e !)
+        // Operador && (and)
+        Console.WriteLine("Operador and");
+        Console.WriteLine((false && false));
+        Console.WriteLine((false && true));
+        Console.WriteLine((true && false));
+        Console.WriteLine((true && true));
+
+        // Operador || (or)
+        Console.WriteLine("Operador or");
+        Console.WriteLine((false || false));
+        Console.WriteLine((false || true));
+        Console.WriteLine((true || false));
+        Console.WriteLine((true || true));
+
+        //Operador ! (not)
+        Console.WriteLine("Operador not");
+        Console.WriteLine(!(false || false));
+        Console.WriteLine(!(false || true));
+        Console.WriteLine(!(true || false));
+        Console.WriteLine(!(true || true));
+
+        // Estruturas Condicionais: if
+        bool condition = false;
+        if (condition == false)
+        {
+            Console.WriteLine("Condition was false");
+        } else { 
+            Console.WriteLine("Condition was true");
+        }
+
+        if (condition == false) Console.WriteLine("Was false");
+
     }
 }
