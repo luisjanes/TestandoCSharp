@@ -1,5 +1,7 @@
 ﻿//conversão implícita, existe para alguns tipos, desde que sejam compatíveis.
 
+using System.Reflection.Metadata.Ecma335;
+
 internal class Program
 {
     private static void Main(string[] args)
@@ -79,7 +81,7 @@ internal class Program
         Console.WriteLine(!(true || true));
 
         // Estruturas Condicionais: if
-        bool condition = false;
+        bool condition = true;
         if (condition == false)
         {
             Console.WriteLine("Condition was false");
@@ -89,5 +91,22 @@ internal class Program
 
         if (condition == false) Console.WriteLine("Was false");
 
+        //Estruturas condicionais switch (para muitas decisões ou cascata)
+        switch (condition)
+        {
+            case true: funcao(); break;//Console.WriteLine("Condition was true"); break;
+            case false: Console.WriteLine("Condition was false"); break;
+            default: Console.WriteLine("Non of both");
+        }
+
+        void funcao() {
+            Console.WriteLine("Inside the function");
+        }
+
+        // Laços de repetição FOR
+        for(int i = 0; i < 10; i++)
+        {
+            Console.WriteLine("Contando: " + i);
+        }
     }
 }
