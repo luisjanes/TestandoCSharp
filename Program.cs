@@ -106,7 +106,44 @@ internal class Program
         // Laços de repetição FOR
         for(int i = 0; i < 10; i++)
         {
-            Console.WriteLine("Contando: " + i);
+            Console.WriteLine("Counting: " + i);
         }
+
+        //Laços de repetição: While (Testa a condição ANTES de executar)
+        int contadorWhile = 1;
+        while (contadorWhile <=1)
+        {
+            Console.WriteLine("While: " + contadorWhile);
+            contadorWhile++;
+        }
+        Console.WriteLine("Depois do laço While: " + contadorWhile);
+
+        //Laços de repetição: DO (Testa a condição DEPOIS)
+        int contadorDo = 1;
+        do 
+        { 
+            Console.WriteLine("Do: " + contadorDo);
+            contadorDo++;
+        } while (contadorDo <=1);
+        Console.WriteLine("Depois do laço DO: " + contadorDo);
+        
+        //Chamada do método
+        string reciveName = ReturnName("Luis", "Janes");
+        Console.WriteLine(reciveName);
+        MeuMetodo("C# é legal");
     }
+
+    //definição do método que não retorna nada(void)
+    static void MeuMetodo(string parametro)
+    {
+        Console.WriteLine(parametro);
+    }
+
+    //método que retorna uma string
+    static string ReturnName(string name, string lastName, int idade = 28)
+    {
+        return name + " " + lastName;
+    }
+
+
 }
