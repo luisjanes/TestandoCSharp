@@ -85,7 +85,9 @@ internal class Program
         if (condition == false)
         {
             Console.WriteLine("Condition was false");
-        } else { 
+        }
+        else
+        {
             Console.WriteLine("Condition was true");
         }
 
@@ -99,19 +101,20 @@ internal class Program
             default: Console.WriteLine("Non of both");
         }
 
-        void funcao() {
+        void funcao()
+        {
             Console.WriteLine("Inside the function");
         }
 
         // Laços de repetição FOR
-        for(int i = 0; i < 10; i++)
+        for (int i = 0; i < 10; i++)
         {
             Console.WriteLine("Counting: " + i);
         }
 
         //Laços de repetição: While (Testa a condição ANTES de executar)
         int contadorWhile = 1;
-        while (contadorWhile <=1)
+        while (contadorWhile <= 1)
         {
             Console.WriteLine("While: " + contadorWhile);
             contadorWhile++;
@@ -120,18 +123,63 @@ internal class Program
 
         //Laços de repetição: DO (Testa a condição DEPOIS)
         int contadorDo = 1;
-        do 
-        { 
+        do
+        {
             Console.WriteLine("Do: " + contadorDo);
             contadorDo++;
-        } while (contadorDo <=1);
+        } while (contadorDo <= 1);
         Console.WriteLine("Depois do laço DO: " + contadorDo);
-        
+
         //Chamada do método
         string reciveName = ReturnName("Luis", "Janes");
         Console.WriteLine(reciveName);
         MeuMetodo("C# é legal");
+
+
+        //Value Types, armazenam uma copia do valor
+        int r = 5;
+        int p = r;
+        Console.WriteLine(r);
+        Console.WriteLine(p);
+        r = 35;
+        Console.WriteLine(r);
+        Console.WriteLine(p);
+
+        //Reference types, armazena a referencia na memória.
+        var arr = new string[2];
+        arr[0] = "Item 1";
+        var arr2 = arr;
+
+        Console.WriteLine(arr[0]);
+        Console.WriteLine(arr2[0]);
+
+        arr[0] = "Item alterado";
+        Console.WriteLine(arr[0]);
+        Console.WriteLine(arr2[0]);
+
+
+
+        var product = new Product();
+        product.Id = 1;
+        product.Price = 50.0f;
+        float priceDolar = product.PriceDolar(4.87f);
+        Console.WriteLine(priceDolar);
+
     }
+
+    //Structs
+    struct Product
+    {
+        public int Id;
+        public float Price;
+
+        public float PriceDolar(float dolar)
+        {
+            return dolar * Price;
+        }
+
+    }
+
 
     //definição do método que não retorna nada(void)
     static void MeuMetodo(string parametro)
@@ -144,6 +192,8 @@ internal class Program
     {
         return name + " " + lastName;
     }
+
+
 
 
 }
