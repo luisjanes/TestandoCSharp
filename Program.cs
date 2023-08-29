@@ -159,9 +159,7 @@ internal class Program
 
 
 
-        var product = new Product();
-        product.Id = 1;
-        product.Price = 50.0f;
+        Product product = new Product(1, 50.0f);
         float priceDolar = product.PriceDolar(4.87f);
         Console.WriteLine(priceDolar);
 
@@ -170,6 +168,13 @@ internal class Program
     //Structs
     struct Product
     {
+        //Pode usar um método contrutor
+        public Product(int id, float price)
+        {
+            Id = id;
+            Price = price;
+        }
+
         public int Id;
         public float Price;
 
