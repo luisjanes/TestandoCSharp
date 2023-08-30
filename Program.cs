@@ -163,6 +163,10 @@ internal class Program
         float priceDolar = product.PriceDolar(4.87f);
         Console.WriteLine(priceDolar);
 
+        Client client = new Client(1, "Luis", EMaritalStatus.Married);
+        Console.WriteLine((int)client.MaritalStatus);
+        Console.WriteLine(client.MaritalStatus);
+
     }
 
     //Structs
@@ -183,6 +187,32 @@ internal class Program
             return dolar * Price;
         }
 
+    }
+
+    struct Client
+    {
+        public Client(int id, string name, EMaritalStatus maritalStatus)
+        {
+            Id = id;
+            Name = name;
+            MaritalStatus = maritalStatus;
+        }
+        public int Id;
+        public string Name;
+        public EMaritalStatus MaritalStatus;
+
+        public string MaritalStatusString(EMaritalStatus maritalStatus)
+        {
+            return maritalStatus.ToString();
+        }
+    }
+
+    //Enum
+    enum EMaritalStatus
+    {
+        Single = 1,
+        Married = 2,
+        Divorced = 3
     }
 
 

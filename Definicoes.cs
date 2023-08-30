@@ -17,4 +17,20 @@
 - Já os reference types, a referencia(endereço de memória) dele na memória é armazenada no Heap.
 
 Nesse caso temos que se você atribuir uma variável como int, string a outra, ela vai copiar o valor. Já se você aatribuir uma CLasse, array, ela vai atribuir a referÇencia na memória.
+
+
+    Enumeradores:
+- Usados pr fornecer uma melhor visuaalizção do código
+- Substituem o uso de inteiros
+- Usados em listas curtas
+- Usado em dados fixos (Hard Coded)
+- Sempre em maiúsculo
+- Começar com a letra E
+
+Ex: 
+    enum ENomedoEnum
+    {
+        //Enumeradores
+        //Enumeradores
+    }
  */
